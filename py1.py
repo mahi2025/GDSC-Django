@@ -76,6 +76,8 @@ def display_menu():
     print("6. To exit\n")
 
 def main():
+    print("Welcome")
+    
     while True:
         display_menu()
         choice = input("Enter your choice from 1-6: ")
