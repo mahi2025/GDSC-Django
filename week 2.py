@@ -10,6 +10,7 @@ def add_student():
     students[name] = {
         'age': age,
         'grade': grade,
+        'section': section,
     }
     print('\n')
     print("The Student is added successfully.\n")
@@ -27,7 +28,7 @@ def view_student():
 
 def list_students():
     if len(students) == 0:  
-        print("No students in the database.\n")
+        print("There is no students in the database.\n")
     else:
         print("List of all students:")
         for name, student in students.items():  
@@ -40,7 +41,7 @@ def list_students():
 def update_student():
     name = input("Enter student's name: ")
     if name in students:  
-        print("Current student information is :")
+        print("The student information:")
         print("Name:", name)
         print("Age:", students[name]['age'])
         print("Grade:", students[name]['grade'])
@@ -48,7 +49,7 @@ def update_student():
 
         age = int(input("Enter updated age: "))
         grade = input("Enter updated grade: ")
-        section = input("Enter the updated section:")
+        section = input("Enter the updated section: ")
 
         students[name]['age'] = age
         students[name]['grade'] = grade
@@ -67,7 +68,7 @@ def delete_student():
         print("The Student is not found.\n")
 
 def display_menu():
-    print("Student Database Program")
+    print("The Student Database Program")
     print("1. To add Student")
     print("2. To view Student")
     print("3. To list All Students")
@@ -76,7 +77,7 @@ def display_menu():
     print("6. To exit\n")
 
 def main():
-    print("Welcome")
+    print("Welcome ")
     
     while True:
         display_menu()
